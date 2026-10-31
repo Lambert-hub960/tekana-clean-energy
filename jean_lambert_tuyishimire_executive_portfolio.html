@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jean Lambert Tuyishimire — Executive Portfolio</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0A1F16',
+                            forest: '#143828',
+                            emerald: '#235D43',
+                            lightGreen: '#40916C',
+                            mint: '#D8F3DC',
+                            gold: '#E9C46A',
+                            amber: '#F4A261',
+                            sand: '#F8F9FA'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Print-ready formatting for exporting to PDF via browser print */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background-color: #ffffff !important;
+                color: #0f172a !important;
+                font-size: 11pt !important;
+            }
+            .page-break {
+                page-break-before: always !important;
+            }
+            .avoid-break {
+                page-break-inside: avoid !important;
+            }
+            .shadow-sm, .shadow-md, .shadow-lg, .shadow-xl, .shadow-2xl {
+                box-shadow: none !important;
+            }
+            .border-slate-800, .border-emerald-800 {
+                border-color: #cbd5e1 !important;
+            }
+            .bg-brand-dark, .bg-brand-forest {
+                background-color: #f8fafc !important;
+                color: #0f172a !important;
+            }
+            .text-white, .text-slate-200, .text-slate-300 {
+                color: #0f172a !important;
+            }
+            a {
+                text-decoration: none !important;
+                color: #0f172a !important;
+            }
+        }
+        .card-hover {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px -5px rgba(20, 56, 40, 0.12);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-brand-lightGreen selection:text-brand-dark">
+
+    <!-- ==================== FLOATING CONTROL BAR (NO-PRINT) ==================== -->
+    <div class="no-print fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-brand-dark/90 border border-emerald-500/40 p-2.5 rounded-2xl backdrop-blur-md shadow-2xl">
+        <button onclick="window.print()" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-brand-lightGreen to-emerald-400 text-brand-dark font-extrabold text-xs flex items-center gap-2 hover:brightness-110 transition-all">
+            <i class="fa-solid fa-print"></i> Save / Print PDF
+        </button>
+        <a href="mailto:Jtuyishimire@ac.rica.rw" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs flex items-center gap-2 border border-slate-700 transition-all">
+            <i class="fa-solid fa-envelope text-brand-gold"></i> Email Founder
+        </a>
+    </div>
+
+    <!-- ==================== HEADER / HERO SECTION ==================== -->
+    <header class="bg-gradient-to-b from-brand-dark via-brand-forest to-slate-900 border-b border-emerald-900/60 pt-12 pb-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+                
+                <!-- Title & Credentials -->
+                <div class="space-y-4 max-w-3xl">
+                    <div class="flex flex-wrap items-center gap-2.5">
+                        <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-brand-lightGreen text-xs font-bold uppercase tracking-wider">
+                            Executive Portfolio
+                        </span>
+                        <span class="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-brand-gold text-xs font-bold uppercase tracking-wider">
+                            One Health & Circular AgTech
+                        </span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                        Jean Lambert Tuyishimire
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-300 font-medium leading-relaxed">
+                        Agricultural Mechanization & Irrigation Specialist | Circular Bio-Resource Engineer
+                    </p>
+
+                    <div class="flex flex-wrap gap-y-2 gap-x-6 text-xs text-slate-300 font-semibold pt-2 border-t border-emerald-900/80">
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-building-columns text-brand-gold"></i> Rwanda Institute for Conservation Agriculture (RICA)</span>
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-award text-brand-lightGreen"></i> Precision Field Academy Fellow</span>
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-network-wired text-emerald-400"></i> Member, AAPA</span>
+                    </div>
+                </div>
+
+                <!-- Quick Contact Info -->
+                <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700/80 space-y-3 min-w-[280px] avoid-break">
+                    <div class="text-xs font-bold uppercase tracking-wider text-brand-gold">Contact & Location</div>
+                    <div class="space-y-2 text-xs font-medium text-slate-200">
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-envelope text-brand-lightGreen w-4"></i>
+                            <a href="mailto:Jtuyishimire@ac.rica.rw" class="hover:underline font-mono">Jtuyishimire@ac.rica.rw</a>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-location-dot text-brand-lightGreen w-4"></i>
+                            <span>Kigali / Bugesera, Rwanda</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-globe text-brand-lightGreen w-4"></i>
+                            <span class="text-slate-300">Circular Energy & AgTech Hub</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
+
+        <!-- ==================== 1. EXECUTIVE PROFILE & ONE HEALTH METHODOLOGY ==================== -->
+        <section class="space-y-6 avoid-break">
+            <div class="border-b border-slate-800 pb-4">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-brand-lightGreen">Section 01</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">
+                    Executive Profile & One Health Systems Methodology
+                </h2>
+            </div>
+
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Jean Lambert Tuyishimire is an agricultural mechanization engineer dedicated to developing decentralized, low-cost technologies that intercept waste streams, protect natural habitats, and enhance community nutrition. Operating under a <strong>One Health framework</strong>, his work addresses the interdependencies between environmental conservation, agricultural productivity, and human health.
+            </p>
+
+            <!-- One Health Diagram Cards -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 pt-2">
+                
+                <div class="bg-slate-800/50 p-5 rounded-2xl border border-slate-700 space-y-2.5">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-tree"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-sm">Forest Ecosystem Conservation</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Replacing wood fuel with recycled bio-briquettes eliminates deforestation pressure along sensitive forest buffer zones.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800/50 p-5 rounded-2xl border border-slate-700 space-y-2.5">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-brand-gold flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-lungs"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-sm">Household Clean Air & Health</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Smokeless bio-briquette combustion eliminates toxic particulate matter ($\text{PM}_{2.5}$) and carbon monoxide ($\text{CO}$) in household kitchens.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800/50 p-5 rounded-2xl border border-slate-700 space-y-2.5">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-brand-lightGreen flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-sm">Soil Organic Health</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Returning spent bio-compost and bio-char back to farming fields restores depleted organic carbon and vital soil micro-flora.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800/50 p-5 rounded-2xl border border-slate-700 space-y-2.5">
+                    <div class="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-300 flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-people-hold"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-sm">Socio-Economic Inclusion</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Empowering women produce vendors and youth through localized equipment operation, green micro-enterprises, and cost reductions.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== 2. FLAGSHIP VENTURE: TEKANA CLEAN ENERGY ==================== -->
+        <section class="space-y-8 avoid-break">
+            <div class="border-b border-slate-800 pb-4">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-brand-lightGreen">Section 02 — Flagship Venture</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">
+                    Tekana Clean Energy: Circular Bio-Waste Valorization
+                </h2>
+            </div>
+
+            <!-- Problem Statement -->
+            <div class="bg-slate-800/60 p-6 rounded-2xl border border-slate-700 space-y-3">
+                <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-triangle-exclamation text-amber-400"></i> The Ecosystem Challenge in Rwanda
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                    Over <strong>80% of households in Rwanda rely on wood fuel and traditional charcoal</strong> for daily cooking, accelerating forest clearance along wildlife corridors and protected parks. Simultaneously, over <strong>1.2 million metric tons of unutilized maize cobs and husks</strong> accumulate annually as agricultural waste or are burned openly. Indoor smoke from traditional cooking causes over <strong>4,500 premature deaths each year</strong>, primarily affecting rural women and children.
+                </p>
+            </div>
+
+            <!-- 5-Stage Process (Text & Vector Icon Layout - No <img> tags) -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-bold text-white">The 5-Stage Circular Manufacturing Process</h3>
+                
+                <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                    
+                    <!-- Stage 1 -->
+                    <div class="bg-slate-800/90 p-5 rounded-2xl border border-slate-700 space-y-3 flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="w-8 h-8 rounded-lg bg-emerald-500/20 text-brand-lightGreen font-extrabold text-xs flex items-center justify-center">01</span>
+                                <i class="fa-solid fa-wheat-awn text-xl text-brand-gold"></i>
+                            </div>
+                            <h4 class="font-bold text-white text-xs">Raw Agro-Waste Sourcing</h4>
+                            <p class="text-[11px] text-slate-300 leading-relaxed">
+                                Sourcing maize cobs, crop husks, and agricultural residues directly from farming cooperatives and market centers.
+                            </p>
+                        </div>
+                        <div class="text-[10px] font-mono text-brand-lightGreen border-t border-slate-700/80 pt-2">
+                            Input: Crop Residues
+                        </div>
+                    </div>
+
+                    <!-- Stage 2 -->
+                    <div class="bg-slate-800/90 p-5 rounded-2xl border border-slate-700 space-y-3 flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="w-8 h-8 rounded-lg bg-emerald-500/20 text-brand-lightGreen font-extrabold text-xs flex items-center justify-center">02</span>
+                                <i class="fa-solid fa-fire-flame-curved text-xl text-amber-400"></i>
+                            </div>
+                            <h4 class="font-bold text-white text-xs">Carbonization & Dust Processing</h4>
+                            <p class="text-[11px] text-slate-300 leading-relaxed">
+                                Subjecting biomass to controlled pyrolysis and blending with recycled market charcoal dust (60:40 ratio).
+                            </p>
+                        </div>
+                        <div class="text-[10px] font-mono text-brand-lightGreen border-t border-slate-700/80 pt-2">
+                            Fine Charcoal Feedstock
+                        </div>
+                    </div>
+
+                    <!-- Stage 3 -->
+                    <div class="bg-slate-800/90 p-5 rounded-2xl border border-slate-700 space-y-3 flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="w-8 h-8 rounded-lg bg-emerald-500/20 text-brand-lightGreen font-extrabold text-xs flex items-center justify-center">03</span>
+                                <i class="fa-solid fa-flask text-xl text-teal-300"></i>
+                            </div>
+                            <h4 class="font-bold text-white text-xs">Bio-Organic Starch Binding</h4>
+                            <p class="text-[11px] text-slate-300 leading-relaxed">
+                                Preparing a non-toxic cassava starch slurry (5–8% concentration) that binds particles with zero chemical fumes.
+                            </p>
+                        </div>
+                        <div class="text-[10px] font-mono text-brand-lightGreen border-t border-slate-700/80 pt-2">
+                            Cassava Binder Slurry
+                        </div>
+                    </div>
+
+                    <!-- Stage 4 -->
+                    <div class="bg-slate-800/90 p-5 rounded-2xl border border-slate-700 space-y-3 flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="w-8 h-8 rounded-lg bg-emerald-500/20 text-brand-lightGreen font-extrabold text-xs flex items-center justify-center">04</span>
+                                <i class="fa-solid fa-gears text-xl text-emerald-400"></i>
+                            </div>
+                            <h4 class="font-bold text-white text-xs">High-Pressure Mechanical Pressing</h4>
+                            <p class="text-[11px] text-slate-300 leading-relaxed">
+                                Compacting using dual-piston steel lever presses (12–15 MPa) forming cylinders with a 15mm airflow chimney.
+                            </p>
+                        </div>
+                        <div class="text-[10px] font-mono text-brand-lightGreen border-t border-slate-700/80 pt-2">
+                            12–15 MPa Compaction
+                        </div>
+                    </div>
+
+                    <!-- Stage 5 -->
+                    <div class="bg-slate-800/90 p-5 rounded-2xl border border-slate-700 space-y-3 flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="w-8 h-8 rounded-lg bg-emerald-500/20 text-brand-lightGreen font-extrabold text-xs flex items-center justify-center">05</span>
+                                <i class="fa-solid fa-sun text-xl text-brand-gold"></i>
+                            </div>
+                            <h4 class="font-bold text-white text-xs">Solar Curing & Clean Bio-Fuel</h4>
+                            <p class="text-[11px] text-slate-300 leading-relaxed">
+                                Passive solar curing racks drying briquettes to &lt;10% moisture, delivering high calorific, smokeless fuel.
+                            </p>
+                        </div>
+                        <div class="text-[10px] font-mono text-brand-lightGreen border-t border-slate-700/80 pt-2">
+                            24–26 MJ/kg Fuel Output
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Performance Comparison Table -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-bold text-white">Technical & Environmental Performance Comparison</h3>
+                
+                <div class="overflow-x-auto rounded-2xl border border-slate-700">
+                    <table class="w-full text-left text-xs font-medium text-slate-200">
+                        <thead class="bg-slate-800 text-white font-bold uppercase tracking-wider text-[11px]">
+                            <tr>
+                                <th class="p-4 border-b border-slate-700">Performance Metric</th>
+                                <th class="p-4 border-b border-slate-700 text-slate-400">Traditional Wood Charcoal</th>
+                                <th class="p-4 border-b border-slate-700 text-brand-gold bg-slate-800/90">Tekana Bio-Briquette</th>
+                                <th class="p-4 border-b border-slate-700 text-brand-lightGreen">Ecosystem & Health Benefit</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800 bg-slate-900/60">
+                            <tr>
+                                <td class="p-4 font-bold text-white">Calorific Energy Value</td>
+                                <td class="p-4 text-slate-400">~28 MJ/kg</td>
+                                <td class="p-4 font-bold text-brand-gold bg-slate-800/40">24 – 26 MJ/kg</td>
+                                <td class="p-4 text-brand-lightGreen">High, sustained heat with zero tree cutting</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold text-white">Burn Duration (Stove)</td>
+                                <td class="p-4 text-slate-400">1.5 Hours</td>
+                                <td class="p-4 font-bold text-brand-gold bg-slate-800/40">2.5 – 3.0 Hours</td>
+                                <td class="p-4 text-brand-lightGreen">80% longer burn duration; reduces household expenses</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold text-white">Emissions & Indoor Smoke</td>
+                                <td class="p-4 text-red-400 font-semibold">High particulate smoke & CO</td>
+                                <td class="p-4 font-bold text-brand-gold bg-slate-800/40">Smokeless (&lt;5% Ash)</td>
+                                <td class="p-4 text-brand-lightGreen">Eliminates toxic household respiratory risks</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold text-white">Forest Buffer Impact</td>
+                                <td class="p-4 text-red-400">Drives forest clearance</td>
+                                <td class="p-4 font-bold text-brand-gold bg-slate-800/40">88 Trees Saved / Ton</td>
+                                <td class="p-4 text-brand-lightGreen">Directly preserves natural wildlife buffer corridors</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold text-white">Retail Price (RWF / kg)</td>
+                                <td class="p-4 text-slate-400">400 RWF / kg</td>
+                                <td class="p-4 font-bold text-brand-gold bg-slate-800/40">200 – 250 RWF / kg</td>
+                                <td class="p-4 text-brand-lightGreen">35–50% direct savings for low-income households</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 3. COMPLEMENTARY PORTFOLIO PILLARS ==================== -->
+        <section class="space-y-6 avoid-break page-break">
+            <div class="border-b border-slate-800 pb-4">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-brand-lightGreen">Section 03</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">
+                    Complementary AgTech Pillars
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                
+                <!-- FruiFresh Rwanda -->
+                <div class="bg-slate-800/60 p-6 rounded-2xl border border-slate-700 space-y-4 flex flex-col justify-between card-hover">
+                    <div class="space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-300 flex items-center justify-center font-bold text-lg">
+                            <i class="fa-solid fa-snowflake"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">FruiFresh Rwanda</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Off-grid evaporative cooling units constructed with charcoal double timber walls and low-wattage solar drip pumps. Integrated with drone aerial scouting (RGB and multispectral imaging) to monitor crop stress and schedule harvest timing.
+                        </p>
+                    </div>
+                    <div class="border-t border-slate-700/80 pt-3 text-[11px] font-semibold text-teal-300 space-y-1">
+                        <div>• 8–12°C internal temperature drop</div>
+                        <div>• Yields increased from 4.0 to 4.7 t/ha</div>
+                    </div>
+                </div>
+
+                <!-- Agri-Smart Initiative -->
+                <div class="bg-slate-800/60 p-6 rounded-2xl border border-slate-700 space-y-4 flex flex-col justify-between card-hover">
+                    <div class="space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-brand-gold flex items-center justify-center font-bold text-lg">
+                            <i class="fa-solid fa-sun text-brand-gold"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Agri-Smart Initiative</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Passive solar cabinet dehydrators utilizing thermal absorption glass, food-grade aluminum frames, and natural convective airflow. Extends perishable produce shelf-life without electricity or chemical preservatives.
+                        </p>
+                    </div>
+                    <div class="border-t border-slate-700/80 pt-3 text-[11px] font-semibold text-brand-gold space-y-1">
+                        <div>• Shelf life extended from 2 days to 6+ months</div>
+                        <div>• 90% financial loss reduction for market women</div>
+                    </div>
+                </div>
+
+                <!-- VitaHarvest Flour -->
+                <div class="bg-slate-800/60 p-6 rounded-2xl border border-slate-700 space-y-4 flex flex-col justify-between card-hover">
+                    <div class="space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-brand-lightGreen flex items-center justify-center font-bold text-lg">
+                            <i class="fa-solid fa-bowl-rice"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">VitaHarvest Flour (KuraNeza)</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Micro-milling venture producing **KuraNeza**—a bio-fortified composite flour blending maize, sorghum, and sun-dried oyster mushroom powder (*Pleurotus ostreatus*). Converts spent mushroom substrate into enriched bio-compost for soil health.
+                        </p>
+                    </div>
+                    <div class="border-t border-slate-700/80 pt-3 text-[11px] font-semibold text-brand-lightGreen space-y-1">
+                        <div>• 50% lower cost than commercial flours</div>
+                        <div>• 20–30% cereal yield increase via compost</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== 4. STRATEGIC FUNDING ALIGNMENT MATRIX ==================== -->
+        <section class="space-y-6 avoid-break">
+            <div class="border-b border-slate-800 pb-4">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-brand-lightGreen">Section 04</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">
+                    Strategic Funding & Grant Alignment
+                </h2>
+            </div>
+
+            <div class="overflow-x-auto rounded-2xl border border-slate-700">
+                <table class="w-full text-left text-xs font-medium text-slate-200">
+                    <thead class="bg-slate-800 text-white font-bold uppercase tracking-wider text-[11px]">
+                        <tr>
+                            <th class="p-4 border-b border-slate-700">Target Grant / Award</th>
+                            <th class="p-4 border-b border-slate-700 text-brand-lightGreen">Matched Innovation</th>
+                            <th class="p-4 border-b border-slate-700">Capital Target</th>
+                            <th class="p-4 border-b border-slate-700 text-slate-300">Core Objective</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800 bg-slate-900/60">
+                        <tr>
+                            <td class="p-4 font-bold text-white">The Awesome Foundation</td>
+                            <td class="p-4 font-bold text-brand-lightGreen">Tekana Equipment Pilot</td>
+                            <td class="p-4 font-mono text-brand-gold">$1,000 USD</td>
+                            <td class="p-4 text-slate-300">Fabrication of 2 dual-piston steel presses, shredder, and cassava binder inventory.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-bold text-white">National Geographic Society</td>
+                            <td class="p-4 font-bold text-brand-lightGreen">FruiFresh Refugia Corridors</td>
+                            <td class="p-4 font-mono text-brand-gold">$20,000 USD</td>
+                            <td class="p-4 text-slate-300">Scaling evaporative cooling nodes & drone GIS mapping along protected forest borders.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-bold text-white">Conservation Leadership (CLP)</td>
+                            <td class="p-4 font-bold text-brand-lightGreen">Tekana Forest Protection</td>
+                            <td class="p-4 font-mono text-brand-gold">$15,000 USD</td>
+                            <td class="p-4 text-slate-300">Establishing community bio-briquette hubs near sensitive avian habitat zones.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-bold text-white">Princeton in Africa (PiAf)</td>
+                            <td class="p-4 font-bold text-brand-lightGreen">Master AgTech Ecosystem</td>
+                            <td class="p-4 font-mono text-slate-400">Fellowship Placement</td>
+                            <td class="p-4 text-slate-300">Deploying circular farm mechanization and post-harvest skills with host institutions.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ==================== LEADERSHIP & CONTACT FOOTER ==================== -->
+        <footer class="bg-slate-800/80 p-8 rounded-3xl border border-slate-700 space-y-6 text-center avoid-break">
+            <div class="max-w-2xl mx-auto space-y-2">
+                <h3 class="text-xl font-bold text-white">Jean Lambert Tuyishimire</h3>
+                <p class="text-xs text-brand-lightGreen font-semibold">
+                    Rwanda Institute for Conservation Agriculture (RICA) | Precision Field Academy | AAPA
+                </p>
+                <p class="text-xs text-slate-300">
+                    Direct Official Email: <a href="mailto:Jtuyishimire@ac.rica.rw" class="text-brand-gold hover:underline font-mono">Jtuyishimire@ac.rica.rw</a>
+                </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-700/80 text-[11px] text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <span>© 2026 Jean Lambert Tuyishimire. All Rights Reserved.</span>
+                <span class="no-print text-brand-lightGreen">Press "Save / Print PDF" to export this formal document.</span>
+            </div>
+        </footer>
+
+    </main>
+
+</body>
+</html>
